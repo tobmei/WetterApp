@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherActivity">
+
+    <TextView
+        android:id="@+id/txtvTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTemp"
+        app:layout_constraintStart_toEndOf="@+id/ivTemp"
+        app:layout_constraintTop_toTopOf="@+id/ivTemp" />
+
+    <TextView
+        android:id="@+id/txtvWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivWind"
+        app:layout_constraintStart_toEndOf="@+id/ivWind"
+        app:layout_constraintTop_toTopOf="@+id/ivWind" />
+
+    <TextView
+        android:id="@+id/txtvWindDeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvWindSpeed"
+        app:layout_constraintStart_toEndOf="@+id/txtvWindSpeed"
+        app:layout_constraintTop_toTopOf="@+id/txtvWindSpeed"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtvHumidity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivHumid"
+        app:layout_constraintStart_toEndOf="@+id/ivHumid"
+        app:layout_constraintTop_toTopOf="@+id/ivHumid" />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtvDescSub"
+        app:layout_constraintTop_toBottomOf="@+id/txtvHeader"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/txtvHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtvMinTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvTemp"
+        app:layout_constraintStart_toEndOf="@+id/txtvTemp"
+        app:layout_constraintTop_toTopOf="@+id/txtvTemp" />
+
+    <TextView
+        android:id="@+id/txtvMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvMinTemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtvMinTemp"
+        app:layout_constraintTop_toTopOf="@+id/txtvMinTemp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ivHumid"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/ivWind"
+        app:layout_constraintTop_toBottomOf="@+id/ivWind"
+        app:srcCompat="@drawable/icon_humid"
+        tools:srcCompat="@drawable/icon_humid" />
+
+    <ImageView
+        android:id="@+id/ivTemp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="@+id/txtvHeader"
+        app:layout_constraintTop_toBottomOf="@+id/ivIcon"
+        app:srcCompat="@drawable/icon_temp"
+        tools:srcCompat="@drawable/icon_temp" />
+
+    <ImageView
+        android:id="@+id/ivPressure"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/ivHumid"
+        app:layout_constraintTop_toBottomOf="@+id/ivHumid"
+        app:srcCompat="@drawable/icon_hpa" />
+
+    <ImageView
+        android:id="@+id/ivWind"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/ivTemp"
+        app:layout_constraintTop_toBottomOf="@+id/ivTemp"
+        app:srcCompat="@drawable/icon_wind" />
+
+    <TextView
+        android:id="@+id/txtvPressure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPressure"
+        app:layout_constraintStart_toEndOf="@+id/ivPressure"
+        app:layout_constraintTop_toTopOf="@+id/ivPressure" />
+
+    <TextView
+        android:id="@+id/txtvDescSub"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="TextView"
+        android:textAlignment="gravity"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivIcon" />
+
+    <TextView
+        android:id="@+id/txtvWindDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvWindDeg"
+        app:layout_constraintStart_toEndOf="@+id/txtvWindDeg"
+        app:layout_constraintTop_toTopOf="@+id/txtvWindDeg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
