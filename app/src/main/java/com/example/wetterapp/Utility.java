@@ -37,7 +37,7 @@ public class Utility {
     private static final String TAG = Utility.class.getSimpleName();
 
     //Aufzurufende URL mit Platzhaltern für die Parameter
-    private static final String URL = "https://api.openweathermap.org/data/2.5/weather?q={0}&units={1}&lang={2}&mode={3}&appid=03032cc118e2005750fddd997d939a2a";
+    private static final String URL = "https://api.openweathermap.org/data/2.5/weather?q={0}&units={1}&lang={2}&mode={3}&appid=XXX";
     private static final String ICON = "https://openweathermap.org/img/w/{0}.png";
 
     private static String directions[] = {"N", "NE", "E", "SE", "S", "SW", "W", "NW"};
